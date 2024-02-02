@@ -37,10 +37,29 @@ struct AFButton: View {
 
 ---------------
 
- Button(action: {
+Button(action: {
      // action
- }, label: {
+}, label: {
      AFButton(title: "See more")
- })
+})
 
 ```````````````
+---------------
+
+Image Button, Dark/Light Mode
+------------------------------
+
+```````````````ruby
+
+Button(action: {
+     //action
+}, label: {
+     Image(systemName: "xmark")
+         .foregroundStyle(Color(.label))
+         .imageScale(.large)
+         .frame(width: 45, height: 45)
+})
+```````````````
+
+
+
