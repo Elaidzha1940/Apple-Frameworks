@@ -41,6 +41,6 @@ struct AFButton: View {
      // action
  }, label: {
      AFButton(title: "See more")
-})
+ })
 
 ```````````````
