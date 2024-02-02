@@ -35,8 +35,6 @@ struct AFButton: View {
         .preferredColorScheme(.dark)
 }
 
----------------
-
 Button(action: {
      // action
 }, label: {
