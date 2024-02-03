@@ -19,10 +19,10 @@ struct Framework: Hashable, Identifiable {
 
 struct MockData {
     
-    static let sampleFramework = Framework(name: "ARKit",
-                                           imageName: "arkit",
-                                           urlString: "https://developer.apple.com/augmented-reality/arkit",
-                                           description: "ARKit 4 introduces a brand-new Depth API, creating a new way to access the detailed depth information gathered by the LiDAR Scanner on iPhone 12 Pro, iPhone 12 Pro Max, and iPad Pro.\n\nLocation Anchors leverages the higher-resolution data in Apple Maps to place AR experiences at a specific point in the world in your iPhone and iPad apps. And support for face tracking extends to all devices with the Apple Neural Engine and a front-facing camera, so even more users can experience the joy of AR in photos and videos.")
+    static let sampleFramework =  Framework(name: "SwiftUI",
+                                            imageName: "swiftui",
+                                            urlString: "https://developer.apple.com/xcode/swiftui",
+                                            description: "SwiftUI is an innovative, exceptionally simple way to build user interfaces across all Apple platforms with the power of Swift. Build user interfaces for any Apple device using just one set of tools and APIs.\n\nWith a declarative Swift syntax that’s easy to read and natural to write, SwiftUI works seamlessly with new Xcode design tools to keep your code and design perfectly in sync. Automatic support for Dynamic Type, Dark Mode, localization, and accessibility means your first line of SwiftUI code is already the most powerful UI code you’ve ever written.")
     
     static let frameworks = [
         
@@ -56,10 +56,7 @@ struct MockData {
                   urlString: "https://developer.apple.com/classkit",
                   description: "The many great learning apps available in the App Store are an integral part of the teaching and learning experience in schools. By adopting ClassKit, your app will work with Schoolwork, a powerful iPad app for teachers and students to help keep track of assignments and student progress.\n\nYou can help teachers discover assignable activities in your app, take students directly to the right activity with a single tap, and securely and privately share progress data with teachers to help them personalize instruction."),
         
-        Framework(name: "CloudKit",
-                  imageName: "cloudkit",
-                  urlString: "https://developer.apple.com/icloud/cloudkit",
-                  description: "Store your app’s data in iCloud and keep everything up to date across apps and on the web with CloudKit JS. With up to 1PB of free storage for each app, it’s never been easier to build and grow your apps using CloudKit."),
+        
         
         Framework(name: "SF Symbols",
                   imageName: "sf-symbols",
