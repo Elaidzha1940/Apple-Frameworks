@@ -1,6 +1,6 @@
 //  /*
 //
-//  Project: Apple_FrameworksAp
+//  Project: Apple_FrameworksApp
 //  File: ContentView.swift
 //  Created by: Elaidzha Shchukin
 //  Date: 02.02.2024

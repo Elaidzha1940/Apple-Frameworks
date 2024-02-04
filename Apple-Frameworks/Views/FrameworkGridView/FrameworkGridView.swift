@@ -17,7 +17,8 @@ struct FrameworkGridView: View {
         NavigationStack {
             List {
                 ForEach(MockData.frameworks) { framework in
-                    NavigationLink(destination: FrameworkDetailView(framework: framework, isShowingDetailView: $viewModel.isShowingDetailView)) {
+//                    NavigationLink(destination: FrameworkDetailView(framework: framework, isShowingDetailView: $viewModel.isShowingDetailView)) {
+                    NavigationLink(value: framework) {
                         FrameworkTitleView(framework: framework)
                     }
                 }
@@ -32,9 +33,12 @@ struct FrameworkGridView: View {
                     }
                 }
             }
-            .sheet(isPresented: $viewModel.isShowingDetailView) {
-                FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewModel.isShowingDetailView)
+            .navigationDestination(for: Framework.self) { framework in
+                FrameworkDetailView(framework: framework)
             }
+//            .sheet(isPresented: $viewModel.isShowingDetailView) {
+//                FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewModel.isShowingDetailView)
+//            }
         }
         .accentColor(Color(.label))
     }
