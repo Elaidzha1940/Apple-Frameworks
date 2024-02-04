@@ -27,6 +27,7 @@ struct FrameworkGridView: View {
                 FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewModel.isShowingDetailView)
             }
         }
+        .accentColor(Color(.label))
     }
 }
 
