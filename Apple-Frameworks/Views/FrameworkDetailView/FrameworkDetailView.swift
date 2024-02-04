@@ -32,18 +32,21 @@ struct FrameworkDetailView: View {
             }
             .padding()
         
-            //Spacer()
+            Spacer()
             
             Button(action: {
                 isShowingSafariView = true
             }, label: {
-                AFButton(title: "See more")
-                    .offset(x: 0)
+                //AFButton(title: "See more")
+                Label("See more", systemImage: "book.fill")
             })
-            .fullScreenCover(isPresented: $isShowingSafariView) {
-                SafariView(url: URL(string: framework.urlString)!)
-            //SafariView(url: URL(string: framework.urlString) ?? URL(string: "https://github.com/Elaidzha1940")!)
-            }
+            .buttonStyle(.bordered)
+            .controlSize(.large)
+            .tint(Color(.label))
+        }
+        .fullScreenCover(isPresented: $isShowingSafariView) {
+            SafariView(url: URL(string: framework.urlString)!)
+        //SafariView(url: URL(string: framework.urlString) ?? URL(string: "https://github.com/Elaidzha1940")!)
         }
     }
 }
