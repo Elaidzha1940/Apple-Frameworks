@@ -22,7 +22,16 @@ struct FrameworkGridView: View {
                     }
                 }
             }
-            .navigationTitle("Frameworks 🍏")
+            .listStyle(.plain)
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Text("Frameworks 🍏")
+                            .font(.system(size: 30, weight: .bold, design: .serif))
+                    }
+                }
+            }
             .sheet(isPresented: $viewModel.isShowingDetailView) {
                 FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewModel.isShowingDetailView)
             }

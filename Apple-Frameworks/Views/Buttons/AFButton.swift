@@ -13,14 +13,22 @@ struct AFButton: View {
     var title: String
     
     var body: some View {
+//        Text(title)
+//            .font(.system(size: 20, weight: .semibold, design: .serif))
+//            .padding()
+//            .background(Color.black.gradient)
+//            .foregroundStyle(.white)
+//            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+//            .cornerRadius(15)
+        
         Text(title)
-            .font(.system(size: 20, weight: .semibold, design: .rounded))
-            .frame(maxWidth: .infinity)
             .padding()
+            .font(.system(size: 20, weight: .semibold, design: .serif))
             .background(Color.black.gradient)
-            .foregroundStyle(.white)
+            .foregroundColor(.white)
             .cornerRadius(15)
-            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+           
     }
 }
 

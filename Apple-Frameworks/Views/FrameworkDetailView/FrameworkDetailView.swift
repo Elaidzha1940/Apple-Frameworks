@@ -21,18 +21,24 @@ struct FrameworkDetailView: View {
             
             Spacer()
             
-            FrameworkTitleView(framework: framework)
-            
-            Text(framework.description)
-                .font(.system(size: 17, weight: .semibold, design: .rounded))
-                .padding()
-            
-            Spacer()
+            VStack(alignment: .leading, spacing: 10) {
+                
+                FrameworkTitleView(framework: framework)
+                    .padding(.trailing, 30)
+                
+                Text(framework.description)
+                    .font(.system(size: 17, weight: .semibold, design: .serif))
+                    .padding(.vertical)
+            }
+            .padding()
+        
+            //Spacer()
             
             Button(action: {
                 isShowingSafariView = true
             }, label: {
                 AFButton(title: "See more")
+                    .offset(x: 0)
             })
             .fullScreenCover(isPresented: $isShowingSafariView) {
                 SafariView(url: URL(string: framework.urlString)!)

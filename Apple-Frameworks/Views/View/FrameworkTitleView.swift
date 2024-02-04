@@ -16,13 +16,15 @@ struct FrameworkTitleView: View {
         HStack {
             Image(framework.imageName)
                 .resizable()
-                .frame(width: 70, height: 70)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 80, height: 80)
+                .clipShape(Circle())
             
             Text(framework.name)
-                .font(.system(size: 20, weight: .semibold, design: .rounded))
+                .font(.system(size: 20, weight: .semibold, design: .serif))
                 .scaledToFit()
                 .minimumScaleFactor(0.6)
-                .padding()
+                //.padding()
         }
     }
 }
